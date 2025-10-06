@@ -1,7 +1,3 @@
-sudo tshark -l -i wlan0mon \
-  -Y "(wlan.fc.type_subtype==4 || wlan.fc.type_subtype==5) && wlan.ssid" \
-  -T fields -e wlan.fc.type_subtype -e wlan.ssid \
-| python3 -u - <<'PY'
 import sys, re, time, os
 counts={}
 last=0
