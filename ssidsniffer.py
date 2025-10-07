@@ -18,4 +18,3 @@ for line in sys.stdin:
         for k,v in sorted(counts.items(), key=lambda kv:(-kv[1], kv[0]))[:40]:
             print(f"{v:6}  {k}")
         last=time.time()
-PY
